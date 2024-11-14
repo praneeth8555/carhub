@@ -595,7 +595,7 @@ router.post('/search', async (req, res) => {
     const searchQuery = req.query.q;
     const userEmail = req.body.userEmail;  // Assuming userEmail is passed in the body
 
-    console.log(seearchQuery)
+    console.log(searchQuery)
     console.log(userEmail)
 
     // Check if the query parameter exists
