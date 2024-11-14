@@ -84,16 +84,18 @@ export default function SearchResults() {
                 }
 
                 // Set headers including the userEmail
-                const response = await fetch(`https://carhubbackend.onrender.com/api/search?q=${searchTerm}`, {
-                    method: 'POST',  // Assuming GET method for search
+                const response = await fetch('https://carhubbackend.onrender.com/api/search?q=' + searchTerm, {
+                    method: 'POST',  // POST method for the search
                     headers: {
-                        'Content-Type': 'application/json',
-                        'userEmail': userEmail,  // Add userEmail in the headers
+                        'Content-Type': 'application/json',  // Content type as JSON
                     },
+                    body: JSON.stringify({
+                        userEmail: userEmail  // Include userEmail in the body
+                    })
                 });
-
                 const data = await response.json();
                 setSearchResults(data);
+
 
             } catch (error) {
                 console.error("Error fetching search results:", error);
