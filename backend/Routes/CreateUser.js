@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 /**
  * @swagger
- * /CreateUser:
+ * https://carhubbackend.onrender.com/api/CreateUser:
  *   post:
  *     summary: Create a new user
  *     description: Creates a new user with the provided email, name, contact number, and password.
@@ -79,7 +79,7 @@ router.post(
 
 /**
  * @swagger
- * /api/LoginUser:
+ * https://carhubbackend.onrender.com/api/LoginUser:
  *   post:
  *     summary: User login
  *     description: Logs in a user with the provided email and password, and returns an authentication token.
