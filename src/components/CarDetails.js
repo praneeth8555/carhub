@@ -13,7 +13,7 @@ export default function CarDetails() {
     useEffect(() => {
         const fetchCarDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/cars/${id}`);
+                const response = await fetch(`https://carhubbackend.onrender.com/api/cars/${id}`);
                 const data = await response.json();
                 if (data.success) {
                     setCar(data.car);
@@ -35,7 +35,7 @@ export default function CarDetails() {
 
     const handleSave = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/api/cars/${id}`, {
+            const response = await fetch(`https://carhubbackend.onrender.com/api/cars/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(car),
@@ -55,7 +55,7 @@ export default function CarDetails() {
     const handleDelete = async () => {
         if (window.confirm("Are you sure you want to delete this car?")) {
             try {
-                const response = await fetch(`http://localhost:3000/api/cars/${id}`, {
+                const response = await fetch(`https://carhubbackend.onrender.com/api/cars/${id}`, {
                     method: 'DELETE',
                 });
                 const data = await response.json();
@@ -96,7 +96,7 @@ export default function CarDetails() {
 
             if (data.url) {
                 const updatedImages = [...car.images, data.url];
-                const updateResponse = await fetch(`http://localhost:3000/api/cars/${car._id}`, {
+                const updateResponse = await fetch(`https://carhubbackend.onrender.com/api/cars/${car._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ export default function CarDetails() {
         if (window.confirm("Are you sure you want to delete this image?")) {
             try {
                 const updatedImages = car.images.filter((img) => img !== imageUrl);
-                const response = await fetch(`http://localhost:3000/api/cars/${car._id}`, {
+                const response = await fetch(`https://carhubbackend.onrender.com/api/cars/${car._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

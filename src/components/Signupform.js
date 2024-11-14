@@ -19,7 +19,7 @@ export default function Signupform() {
     try {
       // const response = await fetch("http://localhost:5000/api/CreateUser", {
       
-      const response = await fetch("http://localhost:3000/api/CreateUser", {
+      const response = await fetch("https://carhubbackend.onrender.com/api/CreateUser", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

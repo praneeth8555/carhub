@@ -67,7 +67,7 @@ export default function ProductCreation() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/api/createproduct", {
+            const response = await fetch("https://carhubbackend.onrender.com/api/createproduct", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

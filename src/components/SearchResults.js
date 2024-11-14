@@ -84,7 +84,7 @@ export default function SearchResults() {
                 }
 
                 // Set headers including the userEmail
-                const response = await fetch(`http://localhost:3000/api/search?q=${searchTerm}`, {
+                const response = await fetch(`https://carhubbackend.onrender.com/api/search?q=${searchTerm}`, {
                     method: 'GET',  // Assuming GET method for search
                     headers: {
                         'Content-Type': 'application/json',

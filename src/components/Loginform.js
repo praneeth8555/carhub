@@ -11,7 +11,7 @@ export default function Loginform() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/LoginUser", {
+      const response = await fetch("https://carhubbackend.onrender.com/api/LoginUser", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

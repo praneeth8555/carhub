@@ -10,7 +10,7 @@ export default function MyCars() {
         // Fetch user's cars based on their email
         const fetchMyCars = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/mycars?email=${userEmail}`);
+                const response = await fetch(`https://carhubbackend.onrender.com/api/mycars?email=${userEmail}`);
                 const data = await response.json();
                 if (data.success) {
                     setCars(data.cars);
