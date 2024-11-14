@@ -20,10 +20,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3456 && react-scripts start",
+    "start":"serve -s build -l $PORT",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "install-server": "cd backend && npm install",
+    "start-server": "cd backend && node index.js",
+    "install-client": " npm install",
+    "build-client": " npm run build",
+    "start-client": " npm start",
+    "sstart": "set PORT=3456 && react-scripts start",
+    "bbuild": "react-scripts build",
+    "ttest": "react-scripts test",
+    "eeject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
