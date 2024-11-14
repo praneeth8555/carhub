@@ -1,5 +1,3 @@
-Here's a sample **README.md** for your Car Management Application:
-
 
 # Car Management Application
 
