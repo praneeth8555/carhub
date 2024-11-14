@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Use __dirname to build the correct path to your Routes folder
-const routesPath = path.join(__dirname, 'carhub', 'backend', 'Routes');
+const routesPath = path.join(__dirname, 'Routes');
 
 // Read the contents of the Routes directory
 fs.readdir(routesPath, (err, files) => {
