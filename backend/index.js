@@ -8,23 +8,6 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
 
-const fs = require('fs');
-const path = require('path');
-
-// Use __dirname to build the correct path to your Routes folder
-const currentDir = __dirname;
-
-// Read the contents of the Routes directory
-fs.readdir(currentDir, (err, files) => {
-    if (err) {
-        console.error('Error reading directory:', err);
-        return;
-    }
-
-    // Log the filenames in the Routes directory
-    console.log('Files in Routes directory:', files);
-});
-
 require('dotenv').config({ path: '../.env' });
 
 MongoDB();
@@ -62,11 +45,11 @@ const swaggerOptions = {
     },
     apis: [`${__dirname}/Routes/*.js`], // Path to your route files where API docs are written
 };
-console.log(__dirname)
+
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
-console.log("Swagger docs generated:", swaggerDocs);
+
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-console.log("Swagger UI set up at /api/docs");
+
 
 app.use('/api', require('./Routes/CreateUser'))
 app.use('/api', require('./Routes/Products'))
