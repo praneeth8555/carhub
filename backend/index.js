@@ -42,7 +42,7 @@ const swaggerOptions = {
             description: 'A REST API for managing cars and user authentication', // API description
         },
     },
-    apis: ['./routes/*.js'], // Path to your route files where API docs are written
+    apis: [__dirname + '/routes/*.js'], // Path to your route files where API docs are written
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
