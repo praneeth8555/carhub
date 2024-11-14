@@ -42,12 +42,13 @@ const swaggerOptions = {
             description: 'A REST API for managing cars and user authentication', // API description
         },
     },
-    apis: [__dirname + '/routes/*.js'], // Path to your route files where API docs are written
+    apis: [__dirname + '/backend/routes/*.js'], // Path to your route files where API docs are written
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
-
+console.log("Swagger docs generated:", swaggerDocs);
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+console.log("Swagger UI set up at /api/docs");
 
 app.use('/api', require('./Routes/CreateUser'))
 app.use('/api', require('./Routes/Products'))
