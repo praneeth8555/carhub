@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -146,3 +147,7 @@ you can use postman ,thunderclient or any other application to ingest array of l
 
 
 
+=======
+# carhub
+A Car Management Application where users can create, view, edit, and delete cars.
+>>>>>>> 8ce22002a6f7ea48097b26041e1a90a2a3832a2b
