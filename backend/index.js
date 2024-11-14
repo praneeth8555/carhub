@@ -7,6 +7,24 @@ const bodyParser = require('body-parser');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
+
+const fs = require('fs');
+const path = require('path');
+
+// Use __dirname to build the correct path to your Routes folder
+const routesPath = path.join(__dirname, 'carhub', 'backend', 'Routes');
+
+// Read the contents of the Routes directory
+fs.readdir(routesPath, (err, files) => {
+    if (err) {
+        console.error('Error reading directory:', err);
+        return;
+    }
+
+    // Log the filenames in the Routes directory
+    console.log('Files in Routes directory:', files);
+});
+
 require('dotenv').config({ path: '../.env' });
 
 MongoDB();
