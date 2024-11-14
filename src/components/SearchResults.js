@@ -90,7 +90,7 @@ export default function SearchResults() {
                         'Content-Type': 'application/json',  // Content type as JSON
                     },
                     body: JSON.stringify({
-                        userEmail: userEmail  // Include userEmail in the body
+                        userEmail: localStorage.getItem('userEmail'),
                     })
                 });
                 const data = await response.json();
