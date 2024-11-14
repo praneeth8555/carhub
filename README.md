@@ -1,153 +1,61 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+Here's a sample **README.md** for your Car Management Application:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Car Management Application
 
-In the project directory, you can run:
+## Overview
+This Car Management Application allows users to create, view, edit, and delete cars. Each car listing includes up to 10 images, a title, description, and tags (such as car_type, company, and dealer). The app includes user authentication, allows users to manage only their products, and provides search functionality across products.
 
-### `npm start`
+## Features
+1. **User Authentication**
+   - Users can sign up, log in, and access their own products.
+   
+2. **Car Management**
+   - Users can add a car listing with up to 10 images, a title, description, and tags.
+   - Users can view a list of all their cars.
+   - Users can search for cars by title, description, or tags.
+   - Users can view the details of a specific car.
+   - Users can edit a car's title, description, tags, and images.
+   - Users can delete a car listing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Search Functionality**
+   - Users can search through their cars based on keywords in the title, description, or tags.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Frontend Requirements:
+1. **Sign Up / Login Page**
+   - Allow users to register and log in to access their products.
+   
+2. **Product List Page**
+   - Display all cars created by the logged-in user.
+   - Include a search bar to search through the cars.
 
-### `npm test`
+3. **Product Creation Page**
+   - Form for uploading images, setting a title, and writing a description for a new car.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Product Detail Page**
+   - Display a car’s details with options to edit or delete it.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Backend Endpoints:
+1.POST /api/CreateUser Create a new user
+2.POST /api/LoginUser User login
+3.POST /api/createproduct  Create a new product
+4.GET /api/mycars Get all products for a specific user
+5.GET /api/cars/{id} Get car details by ID
+6.PUT /api/cars/{id} Update car details by ID
+7.DELETE /api/cars/{id} Delete a car by ID
+8.POST /api/search Search products by query and filter by user email
 
 
 
+### API Documentation
+To view the API documentation, 
+navigate to [here](https://carhubbackend.onrender.com/api/docs/#/) . This route provides details on request parameters, authentication requirements, and response structures.
+
+## Deployment
+The app is deployed on **render** and is available [here](https://carhub-4uob.onrender.com/).
 
 
-
-
-
-
-
-
-
-dx                                                                                                                  
-to run the project
-open terminal 
-first go to query directory and run the command : 
-npm install 
-
-this Installs the required node modules 
-
-now go to backend directory and create .env file
-add this line in your .env file
-MONGODB_URI=(your mongo uri)
-
-To run backend 
-use this command 
-nodemon ./index.js
-
-To start the query interface(front end) 
-open another terminal 
-go to query directory
-enter the following command :
- npm start
-
-to ingest array of logs 
-this endpoint http://localhost:3000/api/ingest works as query ingestor
-you can use postman ,thunderclient or any other application to ingest array of logs in the given format
-    [
-    {
-        "level": "debug",
-        "message": "Debug message for server-0",
-        "resourceId": "server-0",
-        "timestamp": "2023-11-17T15:29:48.417059Z",
-        "traceId": "abc-xyz-0",
-        "spanId": "span-0",
-        "commit": "00000000",
-        "metadata": {
-            "parentResourceId": "server-0"
-        }
-    },
-    {
-        "level": "info",
-        "message": "Info message for server-1",
-        "resourceId": "server-1",
-        "timestamp": "2023-11-18T15:29:48.417059Z",
-        "traceId": "abc-xyz-1",
-        "spanId": "span-1",
-        "commit": "00000001",
-        "metadata": {
-            "parentResourceId": "server-2"
-        }
-    },
-    {
-        "level": "error",
-        "message": "Error message for server-2",
-        "resourceId": "server-2",
-        "timestamp": "2023-11-19T15:29:48.417059Z",
-        "traceId": "abc-xyz-2",
-        "spanId": "span-2",
-        "commit": "00000002",
-        "metadata": {
-            "parentResourceId": "server-4"
-        }
-    }
-    ]
-
-
-
-=======
-# carhub
-A Car Management Application where users can create, view, edit, and delete cars.
->>>>>>> 8ce22002a6f7ea48097b26041e1a90a2a3832a2b
+## Technologies Used:
+- **Frontend**: React.js, bootstrap, fetch (for API calls)
+- **Backend**: Express.js, MongoDB, Mongoose, JWT Authentication,Express Validator
+- **Deployment**: Render
