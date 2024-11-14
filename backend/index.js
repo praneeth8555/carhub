@@ -14,11 +14,11 @@ MongoDB();
 
 // Use cors middleware
 app.use(cors({
-    origin: "http://localhost:3456",
+    origin: "https://carhub-4uob.onrender.com",
 }));
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3456");
+    res.setHeader("Access-Control-Allow-Origin", "https://carhub-4uob.onrender.com");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
